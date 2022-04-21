@@ -83,7 +83,11 @@ export default class AnimatedObject {
       }
       this.image = this.imageList[this.actualFrame];
     }
-  
+
+    draw(context) {
+      context.drawImage(this.image, this.x, this.y, this.width, this.height);
+    }
+    
     /*jump() {
       this.gravitySpeed = -this.jumpForce;
     }*/
